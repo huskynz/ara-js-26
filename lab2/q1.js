@@ -10,7 +10,7 @@ class Student {
         this.courses = [];
 
     }
-
+    
     enroll(course) {
         if (course instanceof Course) {
             this.courses.push(course);
