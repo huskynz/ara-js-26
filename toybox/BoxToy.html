@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Box of Toys example</title>↩
+</head>
+
+<body>
+    <!-- first load the tools -->
+    <script src='View.js'></script>
+
+    <!-- then load the MODEL -->
+    <script src='BoxToy.js'></script>
+
+    <script>
+        // this script is the <<CONTROLLER>> of the system
+
+        function main() {
+            let theBox = new Box()
+            theBox.addToy('Teddy', 'Brown', 12.34)
+            theBox.addToy('Dolly', 'Pink', 21.43)
+            theBox.addToy('Bat', 'Wooden', 34.56)
+            clr()
+            print(theBox)
+        }
+
+        /* attach the controller function to the browser window's onload event
+
+             it will only execute when all resources (eg other scripts) 
+             have finished loading into the browser window
+
+             The window object represents an open window in a browser.
+            If a document contain frames (<iframe> tags), 
+            the browser creates one window object for the HTML document, 
+            and one additional window object for each frame.
+             https://www.w3schools.com/jsref/obj_window.asp
+
+             The Window interface represents a window containing a DOM document; 
+             the document property points to the DOM document loaded in that window. 
+             https://developer.mozilla.org/en-US/docs/Web/API/Window
+        */
+
+        window.onload = main
+    </script>
+</body>
+
+</html>
